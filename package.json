@@ -1,0 +1,14 @@
+{
+  "name": "BotActions",
+  "main": "bot.js",
+  
+  "scripts": {
+    "start": "node bot.js"
+  },
+  
+  "author": "RSCoders",
+  
+  "dependencies": {
+    "node-telegram-bot-api": "0.66.0"
+  }
+}
