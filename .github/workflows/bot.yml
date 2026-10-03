@@ -35,7 +35,7 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('package.json') }}
 
       - name: Run Bot
-        timeout-minutes: 3
+        timeout-minutes: 358
         continue-on-error: true
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
