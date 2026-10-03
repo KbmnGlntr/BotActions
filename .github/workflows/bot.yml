@@ -6,7 +6,7 @@ on:
 jobs:
   bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 358
+    timeout-minutes: 5
 
     steps:
       - name: Checkout
@@ -36,7 +36,7 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('package.json') }}
 
       - name: Run Bot
-        timeout-minutes: 358
+        timeout-minutes: 5
         continue-on-error: true
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -49,5 +49,5 @@ jobs:
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/${{ github.repository }}/actions/workflows/bot.yml/dispatches \
-            -d '{"ref": "main"}'
+            -d "{\"ref\": \"main\"}"
             
